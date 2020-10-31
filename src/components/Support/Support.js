@@ -15,7 +15,7 @@ class Support extends Component {
             <div>
                   <h2>How well are you being supported</h2>
                   <p>support?</p>
-                <input placeholder="1-5"></input>
+                <input type="number" placeholder="1-5"></input>
                 <button onClick={this.changePage}>Next</button>
             </div>
         )

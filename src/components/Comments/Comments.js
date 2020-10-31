@@ -8,7 +8,7 @@ class Comments extends Component {
             <div>
                 <h2>Any comments you want to leave?</h2>
                 <p>comments:</p>
-                <input placeholder="comments"></input>
+                <input type="text" placeholder="comments"></input>
                 <button>Next</button>
             </div>
         )

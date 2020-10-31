@@ -14,7 +14,7 @@ class Feeling extends Component {
             <div>
                 <h2>How are you feeling today?</h2>
                 <p>feeling?</p>
-                <input className="feelingInput" placeholder="1-5"></input>
+                <input className="feelingInput" type="number" placeholder="1-5"></input>
                 <button onClick={this.changePage} 
                 // if {feelingInput === '' (alert('All fields must be completed.'))}
                 >Next</button>
