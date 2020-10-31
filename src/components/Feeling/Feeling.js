@@ -6,6 +6,7 @@ class Feeling extends Component {
     changePage = () => {
         console.log('changing pages');
         this.props.history.push('/understanding');
+        console.log(this.props.feedback)
     }
 
 

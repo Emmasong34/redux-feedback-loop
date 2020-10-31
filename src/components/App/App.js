@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import './App.css';
 import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
@@ -9,7 +9,18 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
 
+componentDidMount = () => {
+  this.getFeedback();
+}
 
+getFeedback = () => {
+  axios.get('/feedback').then((response) => {
+    console.log('in get feedback', response.data);
+    this.props.dispatch({type: 'COLLECT_FEEDBACK', payload: response.data})
+  }).catch((error) => {
+    console.log('error', error);
+  })
+}
 
 
   render() {

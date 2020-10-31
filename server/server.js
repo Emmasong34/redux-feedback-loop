@@ -8,8 +8,10 @@ app.use(bodyParser.json()); // needed for angular requests
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('build'));
 
-/** ---------- EXPRESS ROUTES ---------- **/
 
+/** ---------- EXPRESS ROUTES ---------- **/
+const feedbackRouter = require('./routes/router.js');
+app.use('/feedback', feedbackRouter);
 
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {
