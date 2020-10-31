@@ -5,7 +5,11 @@ class Comments extends Component {
 
     render () {
         return (
-            <div></div>
+            <div>
+                <p></p>
+                <input placeholder=""></input>
+                <button>Next</button>
+            </div>
         )
     }
 }

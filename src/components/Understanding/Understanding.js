@@ -3,9 +3,19 @@ import {connect} from 'react-redux';
 
 class Understanding extends Component {
 
+    changePage = () => {
+        console.log('changing pages');
+        // this.props.history.push('/');
+    }
+
+
     render () {
         return (
-            <div></div>
+            <div>
+                  <p></p>
+                <input placeholder=""></input>
+                <button >Next</button>
+            </div>
         )
     }
 }
