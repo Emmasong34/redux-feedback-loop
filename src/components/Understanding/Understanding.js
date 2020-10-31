@@ -13,8 +13,9 @@ class Understanding extends Component {
     render () {
         return (
             <div>
-                  <p></p>
-                <input placeholder=""></input>
+                  <h2>How well are you understanding the content?</h2>
+                  <p>understanding?</p>
+                <input placeholder="1-5"></input>
                 <button onClick={this.changePage}>Next</button>
             </div>
         )

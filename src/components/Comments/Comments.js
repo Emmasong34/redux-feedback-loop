@@ -6,8 +6,9 @@ class Comments extends Component {
     render () {
         return (
             <div>
-                <p></p>
-                <input placeholder=""></input>
+                <h2>Any comments you want to leave?</h2>
+                <p>comments:</p>
+                <input placeholder="comments"></input>
                 <button>Next</button>
             </div>
         )
