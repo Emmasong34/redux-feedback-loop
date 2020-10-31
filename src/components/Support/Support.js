@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
-class Comments extends Component {
+class Support extends Component {
 
     render () {
         return (
@@ -14,4 +14,4 @@ class Comments extends Component {
 const putReduxStateOnProps = (reduxState) => ({
     reduxState 
   });
-  export default connect(putReduxStateOnProps)(Comments);
+  export default connect(putReduxStateOnProps)(Support);
