@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import Feeling from '../Feeling/Feeling';
+// import Feeling from '../Feeling/Feeling';
 
 class Understanding extends Component {
 
     changePage = () => {
         console.log('changing pages');
-        // this.props.history.push('/');
+        this.props.history.push('/support');
     }
 
 
@@ -15,7 +15,7 @@ class Understanding extends Component {
             <div>
                   <p></p>
                 <input placeholder=""></input>
-                <button >Next</button>
+                <button onClick={this.changePage}>Next</button>
             </div>
         )
     }

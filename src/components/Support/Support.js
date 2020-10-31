@@ -3,12 +3,19 @@ import {connect} from 'react-redux';
 
 class Support extends Component {
 
+    changePage = () => {
+        console.log('changing pages');
+        this.props.history.push('/comments');
+    }
+
+
     render () {
         return (
+
             <div>
                   <p></p>
                 <input placeholder=""></input>
-                <button>Next</button>
+                <button onClick={this.changePage}>Next</button>
             </div>
         )
     }
