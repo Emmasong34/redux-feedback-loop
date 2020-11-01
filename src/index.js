@@ -29,12 +29,20 @@ const support = (state={}, action) => {
     return state;
 }
 
+const comments = (state={}, action) => {
+    if(action.type === 'COLLECT_COMMENTS'){
+        return action.payload
+    }
+    return state;
+}
+
 //holds all reducers
 const storeInstance = createStore(
     combineReducers({
         feeling,
         understanding, 
-        support
+        support,
+        comments
     }),    
 );
 
