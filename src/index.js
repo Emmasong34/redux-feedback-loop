@@ -15,10 +15,26 @@ const feeling = (state={}, action) => {
     return state;
 }
 
+const understanding = (state={}, action) => {
+    if(action.type === 'COLLECT_UNDERSTANDING'){
+        return action.payload
+    }
+    return state;
+}
+
+const support = (state={}, action) => {
+    if(action.type === 'COLLECT_SUPPORT'){
+        return action.payload
+    }
+    return state;
+}
+
 //holds all reducers
 const storeInstance = createStore(
     combineReducers({
-        feeling
+        feeling,
+        understanding, 
+        support
     }),    
 );
 
