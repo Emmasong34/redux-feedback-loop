@@ -20,6 +20,15 @@ class Feeling extends Component {
     }
     //make onchange function
 
+    handleChange = (event) => {
+        this.setState({
+            feeling: {
+                // ...this.state.feeling,
+                feeling: [event.target.value]
+            }
+        })
+    }
+
     render () {
         return (
             <form onClick={this.addFeeling}>
