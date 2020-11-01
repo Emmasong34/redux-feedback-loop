@@ -25,16 +25,15 @@ class Support extends Component {
         })
     }
 
-
     render () {
         return (
 
-            <form>
+            <div className="supportDiv">
                 <h2>How well are you being supported</h2>
                 <p>support?</p>
                 <input className="supportInput" type="number" placeholder="1-5" onChange={this.handleChange}></input>
                 <button onClick={this.addSupport}>Next</button>
-            </form>
+            </div>
         )
     }
 }

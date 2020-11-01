@@ -23,7 +23,7 @@ class Review extends Component {
 
     render () {
         return (
-            <div>
+            <div className="reviewDiv">
             <ul>
                 <li>Feeling: {this.props.reduxState.feedbackReducer.feeling} </li>
                 <li>Understanding: {this.props.reduxState.feedbackReducer.understanding} </li>

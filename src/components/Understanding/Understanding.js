@@ -24,19 +24,18 @@ class Understanding extends Component {
     handleChange = (event) => {
         this.setState({
                 understanding: event.target.value
-            
         })
     }
 
 
     render () {
         return (
-            <form >
+            <div className="understandingDiv">
                 <h2>How well are you understanding the content?</h2>
                 <p>understanding?</p>
                 <input className="understandingInput" type="number" placeholder="1-5" onChange={this.handleChange}></input>
                 <button onClick={this.addUnderstanding}>Next</button>
-            </form>
+            </div>
         )
     }
 }
