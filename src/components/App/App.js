@@ -6,6 +6,7 @@ import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
+import ThankYou from '../ThankYou/ThankYou';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import {connect} from 'react-redux';
 
@@ -42,6 +43,7 @@ getFeedback = () => {
         <Route exact path="/support" component={Support}/>
         <Route exact path="/comments" component={Comments}/>
         <Route exact path="/review" component={Review}/>
+        <Route exact path="/5" component={ThankYou}/>
         
       </Router>
     );

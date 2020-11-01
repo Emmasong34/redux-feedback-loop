@@ -28,7 +28,7 @@ class Feeling extends Component {
 
     render () {
         return (
-            <form>
+            <div>
                 <h2>How are you feeling today?</h2>
                 <p>feeling?</p>
             
@@ -36,7 +36,7 @@ class Feeling extends Component {
                 <button onClick={this.addFeeling} 
                 // if {feelingInput === '' (alert('All fields must be completed.'))}
                 >Next</button>
-            </form>
+            </div>
         )
     }
 }

@@ -5,12 +5,19 @@ import axios from 'axios';
 class Review extends Component {
 
     handleSubmit = () => {
+        
         console.log('clicked submit for axios post request')
         axios.post('/feedback', this.props.reduxState.feedbackReducer).then((response) => {
             // this.props.getFeedback();
         }).catch((error) => {
             console.log(error);
         })
+        this.changePage();
+    }
+
+    changePage = () => {
+        console.log('changing pages');
+        this.props.history.push('/5');
     }
 
 
