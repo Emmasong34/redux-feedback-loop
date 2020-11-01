@@ -16,7 +16,7 @@ componentDidMount = () => {
 getFeedback = () => {
   axios.get('/feedback').then((response) => {
     console.log('in get feedback', response.data);
-    this.props.dispatch({type: 'COLLECT_FEEDBACK', payload: response.data})
+    // this.props.dispatch({type: 'COLLECT_FEEDBACK', payload: response.data})
   }).catch((error) => {
     console.log('error', error);
   })

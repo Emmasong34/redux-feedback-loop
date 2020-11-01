@@ -8,8 +8,8 @@ import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 
 
-const feedback = (state=[], action) => {
-    if(action.type === 'COLLECT_FEEDBACK'){
+const feeling = (state={}, action) => {
+    if(action.type === 'COLLECT_FEELING'){
         return action.payload
     }
     return state;
@@ -18,7 +18,7 @@ const feedback = (state=[], action) => {
 //holds all reducers
 const storeInstance = createStore(
     combineReducers({
-        feedback
+        feeling
     }),    
 );
 
