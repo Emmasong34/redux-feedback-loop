@@ -10,13 +10,14 @@ class Feeling extends Component {
     changePage = () => {
         console.log('changing pages');
         this.props.history.push('/understanding');
+        this.addFeeling();
     }
 
     addFeeling = () => {
         // console.log('in add feeling', this.state.feeling);
         this.props.dispatch({type: 'COLLECT_FEELING', payload: this.state.feeling})
         // this.state.addFeeling(this.state.feeling);
-        this.changePage();
+        // this.changePage();
     }
     //make onchange function
 
@@ -29,13 +30,12 @@ class Feeling extends Component {
     render () {
         return (
             <div className="feelingDiv">
+                <form onSubmit={this.changePage}>
                 <h2>How are you feeling today?</h2>
                 <p>feeling?</p>
-            
-                <input className="feelingInput" type="number" placeholder="1-5" onChange={this.handleChange}></input>
-                <button onClick={this.addFeeling} 
-                // if {feelingInput === '' (alert('All fields must be completed.'))}
-                >Next</button>
+                <input className="feelingInput" required="required" type="number" placeholder="1-5" onChange={this.handleChange}></input>
+                <button>Next</button>
+                </form>
             </div>
         )
     }

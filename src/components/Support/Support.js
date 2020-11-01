@@ -10,13 +10,14 @@ class Support extends Component {
     changePage = () => {
         console.log('changing pages');
         this.props.history.push('/comments');
+        this.addSupport();
     }
 
     addSupport = (event) => {
         // console.log('in add support', this.state.support);
         // event.preventDefault();
         this.props.dispatch({type: 'COLLECT_SUPPORT', payload: this.state.support})
-        this.changePage();
+        // this.changePage();
     }
 
     handleChange = (event) => {
@@ -29,10 +30,12 @@ class Support extends Component {
         return (
 
             <div className="supportDiv">
+                <form onSubmit={this.changePage}>
                 <h2>How well are you being supported</h2>
                 <p>support?</p>
-                <input className="supportInput" type="number" placeholder="1-5" onChange={this.handleChange}></input>
-                <button onClick={this.addSupport}>Next</button>
+                <input className="supportInput" required="required" type="number" placeholder="1-5" onChange={this.handleChange}></input>
+                <button>Next</button>
+                </form>
             </div>
         )
     }

@@ -11,6 +11,7 @@ class Understanding extends Component {
     changePage = () => {
         console.log('changing pages');
         this.props.history.push('/support');
+        this.addUnderstanding();
     }
 
     addUnderstanding = (event) => {
@@ -18,7 +19,7 @@ class Understanding extends Component {
         // event.preventDefault();
         this.props.dispatch({type: 'COLLECT_UNDERSTANDING', payload: this.state.understanding})
         // this.state.addFeeling(this.state.feeling);
-        this.changePage();
+        // this.changePage();
     }
 
     handleChange = (event) => {
@@ -31,10 +32,12 @@ class Understanding extends Component {
     render () {
         return (
             <div className="understandingDiv">
+                <form onSubmit={this.changePage}>
                 <h2>How well are you understanding the content?</h2>
                 <p>understanding?</p>
-                <input className="understandingInput" type="number" placeholder="1-5" onChange={this.handleChange}></input>
-                <button onClick={this.addUnderstanding}>Next</button>
+                <input className="understandingInput" required="required" type="number" placeholder="1-5" onChange={this.handleChange}></input>
+                <button>Next</button>
+                </form>
             </div>
         )
     }
