@@ -9,12 +9,13 @@ import { Provider } from 'react-redux';
 import { applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
-const feedback = {
-    feeling: 0,
-    understanding: 0,
-    support: 0,
-    comments: ''
-    }
+//guide for object being created for database
+// const feedback = {
+//     feeling: 0,
+//     understanding: 0,
+//     support: 0,
+//     comments: ''
+//     }
 
 const feedbackReducer = (state={}, action) => {
     if(action.type === 'COLLECT_FEELING'){
