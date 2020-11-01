@@ -6,6 +6,8 @@ import registerServiceWorker from './registerServiceWorker';
 
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
+import { applyMiddleware } from 'redux';
+import logger from 'redux-logger';
 
 const feedback = {
     feeling: 0,
@@ -65,12 +67,10 @@ const feedbackReducer = (state={}, action) => {
 
 //holds all reducers
 const storeInstance = createStore(
-    combineReducers({
-        feedbackReducer,
-        // understanding, 
-        // support,
-        // comments
+        combineReducers({
+        feedbackReducer
     }),    
+    applyMiddleware(logger),
 );
 
 ReactDOM.render(<Provider store={storeInstance}><App /></Provider>, 
