@@ -4,9 +4,9 @@ import {connect} from 'react-redux';
 
 class Comments extends Component {
 
-    // state = {
-    //     comments: ''
-    // }
+    state = {
+        comments: ''
+    }
 
     //change page function goes here?
     changePage = () => {
@@ -31,14 +31,11 @@ class Comments extends Component {
         return (
             
             <div>
-            <form>
+            
                 <h2>Any comments you want to leave?</h2>
                 <p>comments:</p>
                 <input className="commentsInput" type="text" placeholder="comments" onChange={this.handleChange}></input>
                 <button onClick={this.addComments}>Next</button>
-            </form>
-            
-            
             
             
             </div>
