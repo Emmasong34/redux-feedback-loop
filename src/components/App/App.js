@@ -33,7 +33,10 @@ getFeedback = () => {
           <header className="App-header">
             <h1 className="App-title">Feedback!</h1>
             <h4><i>Don't forget it!</i></h4>
-            <h1>{JSON.stringify(this.props.reduxState)}</h1>
+
+            {/* stringify is helpful for testing that the inputs are being added to the reducer */}
+            {/* <h1>{JSON.stringify(this.props.reduxState)}</h1> */}
+            
           </header>
           <br/>
           {/* <Feeling /> */}
