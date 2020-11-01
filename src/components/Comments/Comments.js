@@ -1,37 +1,47 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
+
 class Comments extends Component {
 
-    state = {
-        comments: ''
-    }
+    // state = {
+    //     comments: ''
+    // }
 
     //change page function goes here?
+    changePage = () => {
+        console.log('changing pages');
+        this.props.history.push('/review');
+    }
 
     addComments = (event) => {
-        console.log('in add comments', this.state.comments);
-        event.preventDefault();
+        // console.log('in add comments', this.state.comments);
+        // event.preventDefault();
         this.props.dispatch({type: 'COLLECT_COMMENTS', payload: this.state.comments})
+        this.changePage();
     }
 
     handleChange = (event) => {
         this.setState({
-            comments: {
-                comments: [event.target.value]
-            }
+                comments: event.target.value
         })
     }
 
     render () {
         return (
-
-            <form onClick={this.addComments}>
+            
+            <div>
+            <form>
                 <h2>Any comments you want to leave?</h2>
                 <p>comments:</p>
                 <input className="commentsInput" type="text" placeholder="comments" onChange={this.handleChange}></input>
-                <button>Next</button>
+                <button onClick={this.addComments}>Next</button>
             </form>
+            
+            
+            
+            
+            </div>
         )
     }
 }

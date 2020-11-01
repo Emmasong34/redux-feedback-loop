@@ -5,7 +5,9 @@ import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
+import Review from '../Review/Review';
 import { HashRouter as Router, Route } from 'react-router-dom';
+import {connect} from 'react-redux';
 
 class App extends Component {
 
@@ -30,6 +32,7 @@ getFeedback = () => {
           <header className="App-header">
             <h1 className="App-title">Feedback!</h1>
             <h4><i>Don't forget it!</i></h4>
+            <h1>{JSON.stringify(this.props.reduxState)}</h1>
           </header>
           <br/>
           {/* <Feeling /> */}
@@ -38,10 +41,16 @@ getFeedback = () => {
         <Route exact path="/understanding" component={Understanding}/>
         <Route exact path="/support" component={Support}/>
         <Route exact path="/comments" component={Comments}/>
-
+        <Route exact path="/review" component={Review}/>
+        
       </Router>
     );
   }
 }
 
-export default App;
+const putReduxStateOnProps = (reduxState) => ({
+  reduxState 
+});
+export default connect(putReduxStateOnProps)(App);
+
+

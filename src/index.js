@@ -7,42 +7,69 @@ import registerServiceWorker from './registerServiceWorker';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 
+const feedback = {
+    feeling: 0,
+    understanding: 0,
+    support: 0,
+    comments: ''
+    }
 
-const feeling = (state={}, action) => {
+const feedbackReducer = (state={}, action) => {
     if(action.type === 'COLLECT_FEELING'){
-        return action.payload
+        return {
+            ...state,
+            feeling: action.payload
+        }
+    }
+    else if(action.type === 'COLLECT_UNDERSTANDING'){
+        return {
+            ...state,
+            understanding: action.payload
+        }
+    }
+    else if(action.type === 'COLLECT_SUPPORT'){
+        return {
+            ...state,
+            support: action.payload
+        }
+    }
+    else if(action.type === 'COLLECT_COMMENTS'){
+        return {
+            ...state,
+            comments: action.payload
+        }
     }
     return state;
 }
 
-const understanding = (state={}, action) => {
-    if(action.type === 'COLLECT_UNDERSTANDING'){
-        return action.payload
-    }
-    return state;
-}
+// const understanding = (state={}, action) => {
+//     if(action.type === 'COLLECT_UNDERSTANDING'){
+//         return action.payload
+//     }
+//     return state;
+// }
 
-const support = (state={}, action) => {
-    if(action.type === 'COLLECT_SUPPORT'){
-        return action.payload
-    }
-    return state;
-}
+// const support = (state={}, action) => {
+//     if(action.type === 'COLLECT_SUPPORT'){
+//         return action.payload
+//     }
+//     return state;
+// }
 
-const comments = (state={}, action) => {
-    if(action.type === 'COLLECT_COMMENTS'){
-        return action.payload
-    }
-    return state;
-}
+// const comments = (state={}, action) => {
+//     if(action.type === 'COLLECT_COMMENTS'){
+//         return action.payload
+//     }
+//     return state;
+// }
 
 //holds all reducers
 const storeInstance = createStore(
     combineReducers({
-        feeling,
-        understanding, 
-        support,
-        comments
+        feedbackReducer,
+        // understanding, 
+        // support,
+        // comments
     }),    
 );
 

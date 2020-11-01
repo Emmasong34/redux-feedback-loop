@@ -3,9 +3,9 @@ import {connect} from 'react-redux';
 
 class Support extends Component {
 
-    state = {
-        support: 0
-    }
+    // state = {
+    //     support: 0
+    // }
 
     changePage = () => {
         console.log('changing pages');
@@ -13,16 +13,15 @@ class Support extends Component {
     }
 
     addSupport = (event) => {
-        console.log('in add support', this.state.support);
-        event.preventDefault();
+        // console.log('in add support', this.state.support);
+        // event.preventDefault();
         this.props.dispatch({type: 'COLLECT_SUPPORT', payload: this.state.support})
+        this.changePage();
     }
 
     handleChange = (event) => {
         this.setState({
-            support: {
-                support: [event.target.value]
-            }
+                support: event.target.value
         })
     }
 
@@ -30,11 +29,11 @@ class Support extends Component {
     render () {
         return (
 
-            <form onClick={this.addSupport}>
+            <form>
                 <h2>How well are you being supported</h2>
                 <p>support?</p>
                 <input className="supportInput" type="number" placeholder="1-5" onChange={this.handleChange}></input>
-                <button onClick={this.changePage}>Next</button>
+                <button onClick={this.addSupport}>Next</button>
             </form>
         )
     }
