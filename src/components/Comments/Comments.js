@@ -15,6 +15,12 @@ class Comments extends Component {
         this.props.history.push('/review');
     }
 
+      //routes one page back
+      changePageBack = () => {
+        console.log('going back one page');
+        this.props.history.push('/support');
+    }
+
     //sends comments input to reducer
     addComments = (event) => {
         console.log('in add comments');
@@ -37,7 +43,10 @@ class Comments extends Component {
                 <h2>Any comments you want to leave?</h2>
                 <p>comments:</p>
                 <input className="commentsInput" type="text" placeholder="comments" onChange={this.handleChange}></input>
+                <br></br>
                 <button onClick={this.addComments}>Next</button>
+                <br></br>
+                <button onClick={this.changePageBack}>Back</button>
             
             
             </div>

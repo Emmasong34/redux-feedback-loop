@@ -10,6 +10,12 @@ class Support extends Component {
         this.addSupport();
     }
 
+      //routes one page back
+      changePageBack = () => {
+        console.log('going back one page');
+        this.props.history.push('/understanding');
+    }
+
     //sends support input to reducer
     addSupport = (event) => {
         console.log('in add support');
@@ -31,8 +37,10 @@ class Support extends Component {
                 <h2>How well are you being supported</h2>
                 <p>support?</p>
                 <input className="supportInput" required="required" type="number" onChange={this.handleChange}></input>
+                <br></br>
                 <button>Next</button>
                 </form>
+                <button onClick={this.changePageBack}>Back</button>
             </div>
         )
     }

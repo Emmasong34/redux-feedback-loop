@@ -11,6 +11,12 @@ class Understanding extends Component {
         this.addUnderstanding();
     }
 
+    //routes one page back
+    changePageBack = () => {
+        console.log('going back one page');
+        this.props.history.push('/feeling');
+    }
+
     //sends understanding input to reducer
     addUnderstanding = (event) => {
         console.log('in add understanding');
@@ -32,8 +38,10 @@ class Understanding extends Component {
                 <h2>How well are you understanding the content?</h2>
                 <p>understanding?</p>
                 <input className="understandingInput" required="required" type="number" onChange={this.handleChange}></input>
+                <br></br>
                 <button>Next</button>
                 </form>
+                <button className="backUnderstanding" onClick={this.changePageBack}>Back</button>
             </div>
         )
     }

@@ -21,6 +21,12 @@ class Review extends Component {
         this.props.history.push('/5');
     }
 
+       //routes one page back
+       changePageBack = () => {
+        console.log('going back one page');
+        this.props.history.push('/comments');
+    }
+
 
     render () {
         return (
@@ -33,6 +39,8 @@ class Review extends Component {
            
             
             <button className="reviewButton" onClick={this.handleSubmit}>SUBMIT</button>
+            <br></br>
+            <button onClick={this.changePageBack}>Back</button>
             </div>
           )
     }
