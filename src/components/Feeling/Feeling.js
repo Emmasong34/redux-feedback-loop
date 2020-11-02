@@ -3,24 +3,20 @@ import {connect} from 'react-redux';
 
 class Feeling extends Component {
 
-    // state = {
-    //     feeling: 0
-    // }
-
+    //routes to next page
     changePage = () => {
         console.log('changing pages');
         this.props.history.push('/understanding');
         this.addFeeling();
     }
 
+    //sends feeling input to reducer
     addFeeling = () => {
-        // console.log('in add feeling', this.state.feeling);
+        console.log('in add feeling');
         this.props.dispatch({type: 'COLLECT_FEELING', payload: this.state.feeling})
-        // this.state.addFeeling(this.state.feeling);
-        // this.changePage();
     }
-    //make onchange function
-
+   
+    //sets input value to feeling
     handleChange = (event) => {
         this.setState({
             feeling: event.target.value

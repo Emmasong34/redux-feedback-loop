@@ -12,20 +12,6 @@ import {connect} from 'react-redux';
 
 class App extends Component {
 
-componentDidMount = () => {
-  this.getFeedback();
-}
-
-getFeedback = () => {
-  axios.get('/feedback').then((response) => {
-    console.log('in get feedback', response.data);
-    // this.props.dispatch({type: 'COLLECT_FEEDBACK', payload: response.data})
-  }).catch((error) => {
-    console.log('error', error);
-  })
-}
-
-
   render() {
     return (
       <Router>
@@ -36,10 +22,9 @@ getFeedback = () => {
 
             {/* stringify is helpful for testing that the inputs are being added to the reducer */}
             {/* <h1>{JSON.stringify(this.props.reduxState)}</h1> */}
-            
+
           </header>
           <br/>
-          {/* <Feeling /> */}
         </div>
         <Route exact path="/feeling" component={Feeling}/>
         <Route exact path="/understanding" component={Understanding}/>

@@ -3,23 +3,20 @@ import {connect} from 'react-redux';
 
 class Support extends Component {
 
-    // state = {
-    //     support: 0
-    // }
-
+    //routes to next page
     changePage = () => {
         console.log('changing pages');
         this.props.history.push('/comments');
         this.addSupport();
     }
 
+    //sends support input to reducer
     addSupport = (event) => {
-        // console.log('in add support', this.state.support);
-        // event.preventDefault();
+        console.log('in add support');
         this.props.dispatch({type: 'COLLECT_SUPPORT', payload: this.state.support})
-        // this.changePage();
     }
 
+    //sets input value to support
     handleChange = (event) => {
         this.setState({
                 support: event.target.value

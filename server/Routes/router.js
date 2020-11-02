@@ -2,20 +2,9 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool');
 
-router.get('/', (req, res) => {
-    console.log('GET /feedback');
-    pool.query('SELECT * from "feedback";').then((result) => {
-        res.send(result.rows);
-        console.log('IN ROUTER JS / GET REQUEST' , result);
-    }).catch((error) => {
-        console.log('Error GET /feedback', error)
-        res.sendStatus(500);
-    });
-})
-
+//sends data to database
 router.post('/',  (req, res) => {
     let feedback = req.body;
-  
     let queryText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
                      VALUES ($1, $2, $3, $4);`;
     pool.query(queryText, [feedback.feeling, feedback.understanding, feedback.support, feedback.comments])

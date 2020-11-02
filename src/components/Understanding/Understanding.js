@@ -4,24 +4,20 @@ import {connect} from 'react-redux';
 
 class Understanding extends Component {
 
-    // state = {
-    //     understanding: 0
-    // }
-
+    //routes to next page
     changePage = () => {
         console.log('changing pages');
         this.props.history.push('/support');
         this.addUnderstanding();
     }
 
+    //sends understanding input to reducer
     addUnderstanding = (event) => {
-        // console.log('in add understanding', this.state.understanding);
-        // event.preventDefault();
+        console.log('in add understanding');
         this.props.dispatch({type: 'COLLECT_UNDERSTANDING', payload: this.state.understanding})
-        // this.state.addFeeling(this.state.feeling);
-        // this.changePage();
     }
 
+    //sets input value to understanding
     handleChange = (event) => {
         this.setState({
                 understanding: event.target.value

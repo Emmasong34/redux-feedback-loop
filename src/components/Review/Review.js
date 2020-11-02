@@ -4,17 +4,18 @@ import axios from 'axios';
 
 class Review extends Component {
 
+
+    //axios post request sends data to database
     handleSubmit = () => {
-        
         console.log('clicked submit for axios post request')
         axios.post('/feedback', this.props.reduxState.feedbackReducer).then((response) => {
-            // this.props.getFeedback();
         }).catch((error) => {
             console.log(error);
         })
         this.changePage();
     }
 
+    //routes to next page
     changePage = () => {
         console.log('changing pages');
         this.props.history.push('/5');

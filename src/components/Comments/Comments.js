@@ -4,23 +4,25 @@ import {connect} from 'react-redux';
 
 class Comments extends Component {
 
+    //allows comment input to be left empty
     state = {
         comments: ''
     }
 
-    //change page function goes here?
+    //routes to next page
     changePage = () => {
         console.log('changing pages');
         this.props.history.push('/review');
     }
 
+    //sends comments input to reducer
     addComments = (event) => {
-        // console.log('in add comments', this.state.comments);
-        // event.preventDefault();
+        console.log('in add comments');
         this.props.dispatch({type: 'COLLECT_COMMENTS', payload: this.state.comments})
         this.changePage();
     }
 
+    //sets input value to comments
     handleChange = (event) => {
         this.setState({
                 comments: event.target.value
