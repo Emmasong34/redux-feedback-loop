@@ -33,7 +33,7 @@ class Support extends Component {
                 <form onSubmit={this.changePage}>
                 <h2>How well are you being supported</h2>
                 <p>support?</p>
-                <input className="supportInput" required="required" type="number" placeholder="1-5" onChange={this.handleChange}></input>
+                <input className="supportInput" required="required" type="number" onChange={this.handleChange}></input>
                 <button>Next</button>
                 </form>
             </div>

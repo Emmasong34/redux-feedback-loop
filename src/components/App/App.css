@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #033076;
+  background-color: peachpuff;
   min-height: 70px;
   padding: 20px;
   color: white;
@@ -25,6 +25,7 @@
   text-align: center;
 }
 
+
 .supportDiv {
   text-align: center;
 }
@@ -35,7 +36,11 @@
 
 .reviewDiv {
   text-align: left;
-  padding-left: 350px;
+  padding-left: 340px;
+}
+
+.reviewButton {
+  margin-left: 50px;
 }
 
 .thankYouDiv {

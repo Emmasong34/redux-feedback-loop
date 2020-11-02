@@ -31,7 +31,7 @@ class Review extends Component {
                 <li>Comments: {this.props.reduxState.feedbackReducer.comments}</li>
             </ul>
             
-            <button onClick={this.handleSubmit}>SUBMIT</button>
+            <button className="reviewButton" onClick={this.handleSubmit}>SUBMIT</button>
             </div>
           )
     }
