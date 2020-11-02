@@ -24,12 +24,12 @@ class Review extends Component {
     render () {
         return (
             <div className="reviewDiv">
-            <ul>
-                <li>Feeling: {this.props.reduxState.feedbackReducer.feeling} </li>
-                <li>Understanding: {this.props.reduxState.feedbackReducer.understanding} </li>
-                <li>Support: {this.props.reduxState.feedbackReducer.support}</li>
-                <li>Comments: {this.props.reduxState.feedbackReducer.comments}</li>
-            </ul>
+            
+                <p>Feeling: {this.props.reduxState.feedbackReducer.feeling} </p>
+                <p>Understanding: {this.props.reduxState.feedbackReducer.understanding} </p>
+                <p>Support: {this.props.reduxState.feedbackReducer.support}</p>
+                <p>Comments: {this.props.reduxState.feedbackReducer.comments}</p>
+           
             
             <button className="reviewButton" onClick={this.handleSubmit}>SUBMIT</button>
             </div>
