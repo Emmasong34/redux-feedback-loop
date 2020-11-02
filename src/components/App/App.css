@@ -17,3 +17,27 @@
   font-size: large;
 }
 
+.feelingDiv {
+  text-align: center;
+}
+
+.understandingDiv {
+  text-align: center;
+}
+
+.supportDiv {
+  text-align: center;
+}
+
+.commentsDiv {
+  text-align: center;
+}
+
+.reviewDiv {
+  text-align: left;
+  padding-left: 350px;
+}
+
+.thankYouDiv {
+  text-align: center;
+}

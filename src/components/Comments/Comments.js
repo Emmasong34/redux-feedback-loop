@@ -30,7 +30,7 @@ class Comments extends Component {
     render () {
         return (
             
-            <div>
+            <div className="commentsDiv">
             
                 <h2>Any comments you want to leave?</h2>
                 <p>comments:</p>
