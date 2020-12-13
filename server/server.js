@@ -10,7 +10,7 @@ app.use(express.static('build'));
 
 
 /** ---------- EXPRESS ROUTES ---------- **/
-const feedbackRouter = require('./routes/router.js');
+const feedbackRouter = require('./Routes/router');
 app.use('/feedback', feedbackRouter);
 
 /** ---------- START SERVER ---------- **/
