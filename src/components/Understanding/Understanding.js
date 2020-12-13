@@ -14,7 +14,7 @@ class Understanding extends Component {
     //routes one page back
     changePageBack = () => {
         console.log('going back one page');
-        this.props.history.push('/feeling');
+        this.props.history.push('/');
     }
 
     //sends understanding input to reducer
@@ -26,7 +26,7 @@ class Understanding extends Component {
     //sets input value to understanding
     handleChange = (event) => {
         this.setState({
-                understanding: event.target.value
+            understanding: event.target.value
         })
     }
 
@@ -35,13 +35,13 @@ class Understanding extends Component {
         return (
             <div className="understandingDiv">
                 <form onSubmit={this.changePage}>
-                <h2>How well are you understanding the content?</h2>
-                <p>understanding?</p>
-                <input className="understandingInput" required="required" type="number" onChange={this.handleChange}></input>
-                <br></br>
-                <button>Next</button>
-                </form>
-                <button className="backUnderstanding" onClick={this.changePageBack}>Back</button>
+                    <h2>How well are you understanding the content?</h2>
+                        <p>understanding?</p>
+                            <input className="understandingInput" required="required" type="text" onChange={this.handleChange}></input>
+                    <br></br>
+                        <button className="backUnderstanding" onClick={this.changePageBack}>Back</button>
+                        <button>Next</button>
+                </form>  
             </div>
         )
     }

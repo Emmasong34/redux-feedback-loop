@@ -34,13 +34,14 @@ class Support extends Component {
 
             <div className="supportDiv">
                 <form onSubmit={this.changePage}>
-                <h2>How well are you being supported</h2>
-                <p>support?</p>
-                <input className="supportInput" required="required" type="number" onChange={this.handleChange}></input>
-                <br></br>
-                <button>Next</button>
+                    <h2>How well are you being supported</h2>
+                        <p>support?</p>
+                            <input className="supportInput" required="required" type="text" onChange={this.handleChange}></input>
+
+                    <br></br>
+                    <button onClick={this.changePageBack}>Back</button>
+                    <button>Next</button>
                 </form>
-                <button onClick={this.changePageBack}>Back</button>
             </div>
         )
     }

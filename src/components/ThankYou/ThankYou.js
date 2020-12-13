@@ -7,7 +7,7 @@ class ThankYou extends Component {
     //routes back to beginning page
     changePage = () => {
         console.log('changing pages');
-        this.props.history.push('/feeling');
+        this.props.history.push('/');
     }
 
 

@@ -21,8 +21,8 @@ class Review extends Component {
         this.props.history.push('/5');
     }
 
-       //routes one page back
-       changePageBack = () => {
+    //routes one page back
+    changePageBack = () => {
         console.log('going back one page');
         this.props.history.push('/comments');
     }
@@ -31,16 +31,13 @@ class Review extends Component {
     render () {
         return (
             <div className="reviewDiv">
-            
                 <p>Feeling: {this.props.reduxState.feedbackReducer.feeling} </p>
                 <p>Understanding: {this.props.reduxState.feedbackReducer.understanding} </p>
                 <p>Support: {this.props.reduxState.feedbackReducer.support}</p>
                 <p>Comments: {this.props.reduxState.feedbackReducer.comments}</p>
-           
-            
-            <button className="reviewButton" onClick={this.handleSubmit}>SUBMIT</button>
             <br></br>
-            <button onClick={this.changePageBack}>Back</button>
+                <button onClick={this.changePageBack}>Back</button>
+                <button className="reviewButton" onClick={this.handleSubmit}>SUBMIT</button>
             </div>
           )
     }
