@@ -28,11 +28,11 @@ class Feeling extends Component {
             <div className="feelingDiv">
                 <form onSubmit={this.changePage}>
                     <h2>How are you feeling today?</h2>
-                        <p>feeling?</p>
-                            <input className="feelingInput" required="required" type="text" onChange={this.handleChange}></input>
+                        <input className="feelingInput" required="required" type="text" onChange={this.handleChange}></input>
                     <br></br>
-                        <button>Next</button>
+                        <button>Next</button>  
                 </form>
+                
             </div>
         )
     }

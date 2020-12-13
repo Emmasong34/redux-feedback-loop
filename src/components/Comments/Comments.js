@@ -40,8 +40,7 @@ class Comments extends Component {
             
             <div className="commentsDiv">
                 <h2>Any comments you want to leave?</h2>
-                    <p>comments:</p>
-                        <input className="commentsInput" type="text" onChange={this.handleChange}></input>
+                    <input className="commentsInput" type="text" onChange={this.handleChange}></input>
                 <br></br>
                     <button onClick={this.changePageBack}>Back</button>
                     <button onClick={this.addComments}>Next</button>

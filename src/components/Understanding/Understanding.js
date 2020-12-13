@@ -36,8 +36,7 @@ class Understanding extends Component {
             <div className="understandingDiv">
                 <form onSubmit={this.changePage}>
                     <h2>How well are you understanding the content?</h2>
-                        <p>understanding?</p>
-                            <input className="understandingInput" required="required" type="text" onChange={this.handleChange}></input>
+                        <input className="understandingInput" required="required" type="text" onChange={this.handleChange}></input>
                     <br></br>
                         <button className="backUnderstanding" onClick={this.changePageBack}>Back</button>
                         <button>Next</button>

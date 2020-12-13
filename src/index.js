@@ -11,9 +11,9 @@ import logger from 'redux-logger';
 
 //guide for object being created for database
 // const feedback = {
-//     feeling: 0,
-//     understanding: 0,
-//     support: 0,
+//     feeling: '',
+//     understanding: '',
+//     support: '',
 //     comments: ''
 //     }
 
